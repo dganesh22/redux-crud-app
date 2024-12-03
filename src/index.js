@@ -4,10 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// css and js files
+import "bootstrap/dist/css/bootstrap.css"
+import "bootstrap/dist/js/bootstrap.bundle"
+
+import "bootstrap-icons/font/bootstrap-icons.css"
+
+import "react-toastify/ReactToastify.css"
+
+// import Provider
+import { Provider } from 'react-redux';
+import AppStore from './Store/AppStore';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={AppStore}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
